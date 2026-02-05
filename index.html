@@ -4,81 +4,95 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Best Online Entertainment Platform 2025 | Trusted by PH Players</title>
-
   <meta name="description" content="Trusted online entertainment platform for PH players. Fast deposit & withdrawal, VIP bonuses, and 24/7 support. Subukan na ngayon." />
-
   <meta property="og:title" content="Best Online Entertainment Platform 2025 – VIP Access"/>
   <meta property="og:description" content="Fast payouts, VIP bonuses, and smooth gaming experience for Philippine users."/>
 </head>
-
-<body style="font-family:Arial, Helvetica, sans-serif; background:#ffffff; color:#222;">
-
+<body style="font-family:Arial, Helvetica, sans-serif; background:#ffffff; color:#222; margin:0; padding:0;">
   <main style="max-width:680px; margin:60px auto; padding:0 20px; line-height:1.7;">
-
     <h1 style="font-size:28px; margin-bottom:10px;">
       Trusted Online Entertainment Platform for PH Players
     </h1>
-
     <p style="font-size:16px; color:#444;">
-      Looking for a reliable online entertainment platform?  
+      Looking for a reliable online entertainment platform?
       <br>
       <strong>Maraming Pilipino na ang gumagamit</strong> dahil sa mabilis na payouts at VIP rewards.
     </p>
-
     <hr style="margin:30px 0; border:none; border-top:1px solid #eee;">
-
     <h2 style="font-size:22px;">Why players choose this platform</h2>
-
     <ul style="padding-left:18px; font-size:16px;">
       <li>✔ Fast deposit & withdrawal (mabilis at hassle-free)</li>
       <li>✔ Exclusive VIP bonuses for active players</li>
       <li>✔ 24/7 customer support (English / Tagalog)</li>
       <li>✔ Smooth experience on mobile & desktop</li>
     </ul>
-
     <p style="margin-top:20px; font-size:16px;">
-      Hindi kailangan ng mahabang proseso.  
+      Hindi kailangan ng mahabang proseso.
       <br>
       <strong>Sign up, deposit, and start playing agad.</strong>
     </p>
 
-    <div style="margin:40px 0; text-align:center;">
+    <!-- 按钮 + 倒计时 -->
+    <div style="margin:50px 0; text-align:center;">
       <a href="https://789bingo.com/?vip=5961809"
          rel="nofollow"
+         id="vip-button"
          style="
            display:inline-block;
-           padding:14px 26px;
-           font-size:18px;
+           padding:16px 40px;
+           font-size:20px;
            background:#e91e63;
            color:#fff;
            text-decoration:none;
-           border-radius:6px;
+           border-radius:8px;
            font-weight:bold;
-         ">
+           box-shadow:0 4px 12px rgba(233,30,99,0.3);
+           transition: all 0.2s;
+         "
+         onmouseover="this.style.background='#c2185b'; this.style.transform='translateY(-2px)';"
+         onmouseout="this.style.background='#e91e63'; this.style.transform='translateY(0)';">
         Access VIP Area Now →
       </a>
+
+      <!-- 倒计时显示 -->
+      <p id="countdown" style="margin-top:20px; font-size:18px; color:#e74c3c; font-weight:bold;">
+        Redirecting in 10 seconds...
+      </p>
     </div>
 
     <p style="text-align:center; font-size:14px; color:#666;">
-      Limited VIP slots available.  
+      Limited VIP slots available.
       <br>
       <em>Mas maagang pumasok, mas maraming rewards.</em>
     </p>
-
     <p style="text-align:center; font-size:13px; color:#888; margin-top:30px;">
-      Redirecting automatically in a few seconds…  
-      <br>
       Kung hindi ka ma-redirect, click the button above.
     </p>
-
   </main>
 
-  <!-- 自动跳转（可保留，也可去掉） -->
+  <!-- 倒计时 + 自动跳转脚本 -->
   <script>
-    setTimeout(function () {
-      window.location.href = "https://789bingo.com/?vip=5961809";
-    }, 6000);
-  </script>
+    let seconds = 10;
+    const countdownElement = document.getElementById('countdown');
+    const vipButton = document.getElementById('vip-button');
 
+    // 倒计时逻辑
+    const timer = setInterval(() => {
+      seconds--;
+      countdownElement.textContent = `Redirecting in ${seconds} second${seconds !== 1 ? 's' : ''}...`;
+
+      if (seconds <= 0) {
+        clearInterval(timer);
+        window.location.href = "https://789bingo.com/?vip=5961809";
+      }
+    }, 1000);
+
+    // 如果用户点击按钮，立即跳转（取消倒计时）
+    vipButton.addEventListener('click', function(e) {
+      e.preventDefault(); // 防止默认跳转
+      clearInterval(timer); // 停止倒计时
+      window.location.href = "https://789bingo.com/?vip=5961809";
+    });
+  </script>
 </body>
 </html>
